@@ -16,12 +16,12 @@ const db = mysql.createConnection(
     user: "root",
     // Your MySQL password
     password: "Manhattan6!",
-    database: "election",
+    database: "biz",
   },
-  console.log("Conneted to the election database")
+  console.log("Conneted to the biz database")
 );
 
-db.query(`SELECT * FROM candidates`, (err, rows) => {
+db.query(`SELECT * FROM employee`, (err, rows) => {
   console.log(rows);
 });
 
