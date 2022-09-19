@@ -67,7 +67,6 @@ getRoles = () => {
   connection.query("SELECT id, title FROM role", (err, res) => {
     if (err) throw err;
     roles = res;
-    // console.table(roles);
   });
 };
 
@@ -75,7 +74,6 @@ getDepartments = () => {
   connection.query("SELECT id, name FROM department", (err, res) => {
     if (err) throw err;
     departments = res;
-    // console.log(departments);
   });
 };
 
@@ -85,7 +83,6 @@ getManagers = () => {
     (err, res) => {
       if (err) throw err;
       managers = res;
-      // console.table(managers);
     }
   );
 };
@@ -96,7 +93,6 @@ getEmployees = () => {
     (err, res) => {
       if (err) throw err;
       employees = res;
-      // console.table(employees);
     }
   );
 };
@@ -122,7 +118,7 @@ addSomething = () => {
         console.log("Add a new: " + answer.add);
         addEmployee();
       } else if (answer.add === "EXIT") {
-        figlet("Thanks for using FSC Employee Tracker", (err, result) => {
+        figlet("Thank you for using Employee Tracker", (err, result) => {
           console.log(err || result);
         });
 
@@ -176,7 +172,7 @@ addRole = () => {
       {
         name: "department_id",
         type: "list",
-        message: "What is the department for this possition?",
+        message: "What is the department for this position?",
         choices: departmentOptions,
       },
     ])
